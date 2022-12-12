@@ -1,7 +1,7 @@
 <?php
-
-
-
+require_once __DIR__ . "/Models/Prodotto.php";
+$item1 = new Prodotto("Corda", 14.99, "gg.pjg", new Categoria("Cani"));
+var_dump($item1);
 ?>
 <!-- Immaginare quali sono le classi necessarie per creare uno shop online con le seguenti caratteristiche:
  - L'e-commerce vende **prodotti** per animali. I prodotti sono categorizzati, le **categorie** sono Cani o Gatti.
@@ -21,6 +21,7 @@ BONUS (Opzionale):
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>PHP-OOP-2</title>
 </head>
 
