@@ -5,7 +5,7 @@ class Cuccia extends Prodotto
     public $weight;
     public $size;
     public $description;
-    public function __construct(String $name, Float $price, String $image, Categoria $category, Float $weight,  String $size, String $description = "")
+    public function __construct(String $name, Float $price, String $image, Categoria $category, String $weight,  String $size, String $description = "")
     {
         parent::__construct($name, $price, $image, $category);
         $this->weight = $weight;

@@ -1,3 +1,8 @@
-body{
+header{
+    height: 100px;
+    background-color: #65b100;
+}
 
+main{
+   background-color: #286400;
 }
