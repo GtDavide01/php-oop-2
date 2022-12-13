@@ -15,6 +15,7 @@ require_once __DIR__ . "/Models/Cuccia.php";
 require_once __DIR__ . "/Models/Database.php";
 require_once __DIR__ . "/Models/Cliente.php";
 require_once __DIR__ . "/Models/Carrello.php";
+require_once __DIR__ . "/Models/Carta.php";
 // var_dump($items);
 
 $utente = new Cliente("Davide", "davidefiorini01@gmail.com");
@@ -22,8 +23,12 @@ $utente->carrello = new Carrello();
 $utente->carrello->add($items[0]);
 $utente->carrello->add($items[2]);
 $totale = $utente->carrello->getTotal();
+
+
+$utente->addCarta(new Carta("1233434343", "561", "10", "2026"));
 var_dump($utente);
-var_dump($totale);
+$result = $utente->pay($totale);
+var_dump($result);
 
 ?>
 <!DOCTYPE html>
