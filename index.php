@@ -13,7 +13,18 @@ require_once __DIR__ . "/Models/Gioco.php";
 require_once __DIR__ . "/Models/Cibo.php";
 require_once __DIR__ . "/Models/Cuccia.php";
 require_once __DIR__ . "/Models/Database.php";
+require_once __DIR__ . "/Models/Cliente.php";
+require_once __DIR__ . "/Models/Carrello.php";
 // var_dump($items);
+
+$utente = new Cliente("Davide", "davidefiorini01@gmail.com");
+$utente->carrello = new Carrello();
+$utente->carrello->add($items[0]);
+$utente->carrello->add($items[2]);
+$totale = $utente->carrello->getTotal();
+var_dump($utente);
+var_dump($totale);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
